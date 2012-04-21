@@ -1,0 +1,28 @@
+<HTML>
+<BODY>
+<H1>LightDM Login/Display Manager</H1>
+
+<H2>How do I change the wallpaper for the login screen?</H2>
+Go to Control Center -> Wallpaper Wizard -> Login Wallpaper Wizard .
+
+<H2>
+How do I enable auto-login?
+</H2>
+	<OL>
+	<LI>As root, open the file /etc/lightdm/lightdm.conf and take note of the lines
+	that read:
+	<pre>
+	# autologin-user=mint
+	# autologin-user-timeout=0
+	# autologin-session=lightdm-autologin</pre>
+	</LI>
+	<LI>Remove the "#" symbols from the above lines.  Replace "mint" with your username.
+	Save the file.</LI>
+	<LI>The next time you boot up, you will be logged in automatically.</LI>
+	<LI>To disable auto-login again, add the "#" symbol to the beginning 
+	of all lines beginning with "autologin".</LI>
+
+
+	</OL>
+</BODY>
+</HTML>
